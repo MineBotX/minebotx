@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MineBotX</title>
-  <meta name="description" content="Майнкрафт боты на заказ ">
-  <meta name="keywords" content="">
+  <meta name="description" content="MineBotX — AFK-боты для поддержания Minecraft-серверов онлайн 24/7. Бесплатный тариф на 1 бота. Работаем с VPS, Minehut, Ploudos.">
+  <meta name="keywords" content="minecraft бот, afk бот, minecraft сервер 24/7, minehut бот, ploudos бот, бесплатный бот minecraft">
   <meta name="theme-color" content="#0a0c0f">
 
   <meta property="og:title" content="MineBotX — AFK-боты для Minecraft-серверов 24/7">
-  <meta property="og:description" content="Держите сервер онлайн 24/7. Бесплаый тариф на 1 бота. IP предоставляет клиент.">
+  <meta property="og:description" content="Держите сервер онлайн 24/7. Бесплатный тариф на 1 бота. IP предоставляет клиент.">
   <meta property="og:type" content="website">
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%233b82f6'/><text x='50' y='68' font-size='60' text-anchor='middle' fill='white'>🤖</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%233b82f6'/><stop offset='1' stop-color='%236ee7b7'/></linearGradient></defs><rect width='64' height='64' rx='14' fill='%230a0c0f'/><path d='M32 8 L52 16 L52 32 C52 44 42 54 32 58 C22 54 12 44 12 32 L12 16 Z' fill='url(%23g)'/><text x='32' y='40' font-family='Arial,sans-serif' font-size='22' font-weight='800' text-anchor='middle' fill='%230a0c0f'>M</text></svg>">
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -113,13 +113,8 @@
     .logo-mark {
       width: 32px;
       height: 32px;
-      background: linear-gradient(135deg, var(--accent-blue), var(--accent));
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 16px;
-      -webkit-text-fill-color: initial;
+      flex-shrink: 0;
+      display: block;
     }
 
     .nav { display: flex; gap: 28px; align-items: center; }
@@ -248,30 +243,27 @@
 
     .hero-image { flex: 0.9; display: flex; justify-content: center; align-items: center; }
 
-    .hero-cube {
-      width: 260px;
-      height: 260px;
-      background: linear-gradient(135deg, var(--accent-blue), var(--accent));
-      border-radius: 40px;
+    .hero-visual {
+      width: 320px;
+      height: 320px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 110px;
-      box-shadow: 0 20px 60px rgba(59, 130, 246, 0.3);
       animation: float 4s ease-in-out infinite;
       position: relative;
     }
 
-    .hero-cube::after {
+    .hero-visual::after {
       content: '';
       position: absolute;
-      inset: -4px;
-      border-radius: 44px;
-      background: linear-gradient(135deg, var(--accent), var(--accent-blue));
+      inset: 20px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.35) 0%, transparent 70%);
       z-index: -1;
-      filter: blur(24px);
-      opacity: 0.4;
+      filter: blur(40px);
     }
+
+    .hero-visual svg { width: 100%; height: 100%; display: block; }
 
     @keyframes float {
       0%, 100% { transform: translateY(0); }
@@ -569,7 +561,7 @@
     .order-header p { color: var(--text-muted); font-size: 16px; max-width: 560px; margin: 0 auto; }
 
     .order-form {
-      max-width: 620px;
+      max-width: 720px;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
@@ -578,6 +570,8 @@
     }
 
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+    .form-row-3 { grid-template-columns: 1fr 1fr 1fr; }
 
     .form-group { display: flex; flex-direction: column; gap: 8px; }
 
@@ -826,7 +820,7 @@
       .hero p { margin: 0 auto 36px; }
       .hero-buttons { justify-content: center; }
       .hero h1 { font-size: 38px; }
-      .hero-cube { width: 180px; height: 180px; font-size: 72px; }
+      .hero-visual { width: 220px; height: 220px; }
       .nav { display: none; }
     }
 
@@ -835,7 +829,7 @@
       .section-title h2 { font-size: 28px; }
       .order-box { padding: 36px 20px; }
       .order-header h2 { font-size: 24px; }
-      .form-row { grid-template-columns: 1fr; }
+      .form-row, .form-row-3 { grid-template-columns: 1fr; }
       .proxy-item .form-row { grid-template-columns: 1fr; }
       .warning-bar { font-size: 12px; padding: 10px 16px; }
       .back-to-top { bottom: 16px; right: 16px; width: 44px; height: 44px; }
@@ -860,7 +854,16 @@
   <header class="header">
     <div class="header-inner">
       <a href="#" class="logo">
-        <span class="logo-mark">🛡️</span>
+        <svg class="logo-mark" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#3b82f6"/>
+              <stop offset="1" stop-color="#6ee7b7"/>
+            </linearGradient>
+          </defs>
+          <path d="M16 3 L27 8 L27 17 C27 23 22 28 16 30 C10 28 5 23 5 17 L5 8 Z" fill="url(#logoGrad)"/>
+          <text x="16" y="21" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="800" text-anchor="middle" fill="#0a0c0f">M</text>
+        </svg>
         MineBotX
       </a>
       <nav class="nav">
@@ -888,7 +891,45 @@
       </div>
     </div>
     <div class="hero-image">
-      <div class="hero-cube">🤖</div>
+      <div class="hero-visual">
+        <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="heroGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#3b82f6"/>
+              <stop offset="1" stop-color="#6ee7b7"/>
+            </linearGradient>
+            <linearGradient id="heroShield" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#3b82f6" stop-opacity="0.9"/>
+              <stop offset="1" stop-color="#6ee7b7" stop-opacity="0.9"/>
+            </linearGradient>
+            <filter id="heroGlow">
+              <feGaussianBlur stdDeviation="8" result="blur"/>
+              <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+          <rect x="20" y="20" width="200" height="200" rx="40" fill="url(#heroGrad)" opacity="0.15"/>
+          <rect x="20" y="20" width="200" height="200" rx="40" fill="none" stroke="url(#heroGrad)" stroke-width="2" opacity="0.5"/>
+          <g filter="url(#heroGlow)">
+            <path d="M120 55 L180 78 L180 130 C180 165 152 195 120 205 C88 195 60 165 60 130 L60 78 Z" fill="url(#heroShield)"/>
+          </g>
+          <text x="120" y="148" font-family="Inter, Arial, sans-serif" font-size="56" font-weight="900" text-anchor="middle" fill="#0a0c0f">M</text>
+          <circle cx="42" cy="120" r="4" fill="#3b82f6">
+            <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="198" cy="120" r="4" fill="#6ee7b7">
+            <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="42" cy="90" r="3" fill="#3b82f6" opacity="0.6">
+            <animate attributeName="opacity" values="1;0.2;1" dur="3s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="198" cy="150" r="3" fill="#6ee7b7" opacity="0.6">
+            <animate attributeName="opacity" values="0.2;1;0.2" dur="3s" repeatCount="indefinite"/>
+          </circle>
+        </svg>
+      </div>
     </div>
   </section>
 
@@ -1076,7 +1117,7 @@
           <span class="arrow">▼</span>
         </div>
         <div class="faq-answer">
-          <strong>Да, Free — действительно бесплатный и без подвоха.</strong> 1 бот на 1 сервер, базовый anti-AFK и авто-реконнект. Мы даём его, чтобы вы могли протестировать продукт перед покупкой. Единственное ограничение — поддержка в Telegram отвечает до 24 часов (у платных тарифов — до 2 часов) и нет имитации живого игрока. Если понравится — перейдёте на Basic или Pro.
+          <strong>Да, Free — действительно бесплатный и без подвоха.</strong> 1 бот на 1 сервер, базовый anti-AFK и авто-реконнект. Мы даём его, чтобы вы могли протестировать продукт перед покупкой. Единственное ограничение — поддержка в Telegram отвечает до 24 часов (у платных тарифов — до 2 часов) и нет имитации живого игрока.
         </div>
       </div>
 
@@ -1090,7 +1131,17 @@
           • IP вашего VPS (если сервер там же),<br>
           • ваш домашний IP (если сервер локальный),<br>
           • резидентный прокси (если нужно несколько ботов с разных IP).<br><br>
-          MineBotX не использует свои IP — так вы полностью контролируете, откуда идут подключения, и не зависите от нас.
+          MineBotX не использует свои IP — так вы полностью контролируете, откуда идут подключения.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          На какую почту приходят письма?
+          <span class="arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+          При отправке заявки мы используем email, который вы указали в форме. На него приходит подтверждение с деталями заявки. Дальнейшая связь — в Telegram. Мы не рассылаем спам и не передаём email третьим лицам.
         </div>
       </div>
 
@@ -1100,7 +1151,7 @@
           <span class="arrow">▼</span>
         </div>
         <div class="faq-answer">
-          <strong>Нет, и MineBotX принципиально не поддерживает Aternos.</strong> Их правила прямо запрещают использование ботов и скриптов для обхода системы 24/7. Система Aternos активно детектирует искусственную активность, и аккаунт владельца может быть заблокирован. Мы не хотим подставлять клиентов под это. Используйте VPS, Minehut, Ploudos или платные хостинги — там бот работает легально и стабильно.
+          <strong>Нет, и MineBotX принципиально не поддерживает Aternos.</strong> Их правила прямо запрещают использование ботов и скриптов для обхода системы 24/7. Система Aternos активно детектирует искусственную активность, и аккаунт владельца может быть заблокирован. Используйте VPS, Minehut, Ploudos или платные хостинги.
         </div>
       </div>
 
@@ -1110,7 +1161,7 @@
           <span class="arrow">▼</span>
         </div>
         <div class="faq-answer">
-          На VPS, Minehut, Ploudos и платных хостингах нет агрессивной детекции AFK-ботов. Мы используем человекоподобное поведение: рандомные задержки, движение, прыжки, смену слотов. Но ключевой момент — <strong>у каждого бота должен быть свой IP</strong>. Если вы запускаете 5 ботов с одного IP — это легко детектится и может привести к бану. Поэтому мы требуем IP/прокси на каждого бота.
+          На VPS, Minehut, Ploudos и платных хостингах нет агрессивной детекции AFK-ботов. Мы используем человекоподобное поведение: рандомные задержки, движение, прыжки, смену слотов. Но <strong>у каждого бота должен быть свой IP</strong> — иначе легко детектится.
         </div>
       </div>
 
@@ -1120,7 +1171,7 @@
           <span class="arrow">▼</span>
         </div>
         <div class="faq-answer">
-          Популярные провайдеры резидентных прокси: ProxySeller, Proxy6, IPRoyal, Smartproxy. Цены — от 100 ₽/мес за IP. MineBotX не продаёт прокси, но поможет подобрать под ваш бюджет и настроить. Напишите в Telegram — подскажем.
+          Популярные провайдеры: ProxySeller, Proxy6, IPRoyal, Smartproxy. Цены — от 100 ₽/мес за IP. MineBotX не продаёт прокси, но поможет подобрать под ваш бюджет и настроить.
         </div>
       </div>
 
@@ -1131,16 +1182,6 @@
         </div>
         <div class="faq-answer">
           Java Edition от 1.12 до 1.21. Для модпаков (Forge, Fabric) — уточняйте в поддержке, мы адаптируем бота под конкретную сборку. Bedrock Edition не поддерживается.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question">
-          Как быстро запустите бота?
-          <span class="arrow">▼</span>
-        </div>
-        <div class="faq-answer">
-          В течение 24 часов после оплаты. В большинстве случаев — за 2–4 часа. Для Free-тарифа — до 48 часов (у нас приоритет у платных клиентов). Вы получаете готового бота, подключённого к вашему серверу с вашего IP, и инструкцию по управлению.
         </div>
       </div>
 
@@ -1161,23 +1202,29 @@
     <div class="order-box">
       <div class="order-header">
         <h2>Оставить заявку в MineBotX</h2>
-        <p>Заполните форму — мы свяжемся с вами в Telegram в течение 10 минут, уточним IP/прокси и подберём тариф</p>
+        <p>Заполните форму — мы свяжемся с вами в Telegram в течение 10 минут и пришлём подтверждение на почту</p>
       </div>
 
       <form class="order-form" id="orderForm" novalidate autocomplete="off">
         <input type="text" name="website" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
 
-        <div class="form-row">
+        <div class="form-row form-row-3">
           <div class="form-group">
             <label for="name">Ваше имя или ник <span class="required">*</span></label>
-            <input type="text" id="name" name="name" placeholder="Пример, Steve или Иван" required minlength="2" maxlength="50" autocomplete="off">
+            <input type="text" id="name" name="name" placeholder="Например, Steve" required minlength="2" maxlength="50" autocomplete="off">
             <span class="form-error" id="nameError">Введите имя (от 2 до 50 символов)</span>
           </div>
 
           <div class="form-group">
             <label for="contact">Telegram <span class="required">*</span></label>
             <input type="text" id="contact" name="contact" placeholder="@username" required minlength="3" maxlength="64" autocomplete="off">
-            <span class="form-error" id="contactError">Укажите контакт Telegram</span>
+            <span class="form-error" id="contactError">Укажите контакт Telegram (от 3 символов)</span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email <span class="required">*</span></label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="off">
+            <span class="form-error" id="emailError">Укажите корректный email</span>
           </div>
         </div>
 
@@ -1186,10 +1233,10 @@
             <label for="plan">Тариф <span class="required">*</span></label>
             <select id="plan" name="plan" required>
               <option value="">— Выберите тариф —</option>
-              <option value="Free">Free — 0 ₽ (1 бот, на 3 дня)</option>
-              <option value="Basic">Basic — 500 ₽ / мес (1 бот, навсегда)</option>
-              <option value="Pro">Pro — 2 450 ₽ / мес (до 3 ботов)</option>
-              <option value="Empire">Empire — 3 000 ₽ / мес (до 10 ботов)</option>
+              <option value="Free">Free — 0 ₽ (1 бот, навсегда)</option>
+              <option value="Basic">Basic — 990 ₽ / мес (1 бот)</option>
+              <option value="Pro">Pro — 2 490 ₽ / мес (до 3 ботов)</option>
+              <option value="Empire">Empire — 5 990 ₽ / мес (до 10 ботов)</option>
               <option value="Другой">Другой / нужна консультация</option>
             </select>
             <span class="form-error" id="planError">Выберите тариф</span>
@@ -1259,22 +1306,29 @@
       </form>
 
       <div class="direct-contacts">
-        <a href="https://t.me/MineBotX_officiall" target="_blank" rel="noopener">
+        <a href="https://t.me/your_telegram" target="_blank" rel="noopener">
           <span class="ico">✈️</span>
           Написать в Telegram
         </a>
-        <a href="https://new.donatepay.ru/@1527469" target="_blank" rel="noopener">
-  <span class="ico">💳</span>
-  Оплатить через DonatePay
-</a>
-</div>
       </div>
     </div>
   </section>
 
   <footer class="footer">
     <div class="footer-inner">
-      <p>© 2025 MineBotX. Все права защищены. <a href="#">Политика конфиденциальности</a></p>
+      <p style="display:flex; align-items:center; gap:8px; justify-content:center; flex-wrap:wrap;">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true">
+          <defs>
+            <linearGradient id="footGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#3b82f6"/>
+              <stop offset="1" stop-color="#6ee7b7"/>
+            </linearGradient>
+          </defs>
+          <path d="M16 3 L27 8 L27 17 C27 23 22 28 16 30 C10 28 5 23 5 17 L5 8 Z" fill="url(#footGrad)"/>
+          <text x="16" y="21" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="800" text-anchor="middle" fill="#0a0c0f">M</text>
+        </svg>
+        © 2025 MineBotX. Все права защищены. <a href="#">Политика конфиденциальности</a>
+      </p>
       <p class="disclaimer">
         MineBotX не аффилирован с Mojang, Microsoft, Aternos, Minehut, Ploudos или другими упомянутыми платформами. Мы не поддерживаем Aternos и не рекомендуем использовать ботов в нарушение правил любых сервисов. IP-адреса и прокси предоставляются клиентом.
       </p>
@@ -1285,10 +1339,10 @@
 
   <script>
     /* ============================================================
-       URL воркера Cloudflare — зашит прямо сюда, без переменной.
+       URL воркера Cloudflare.
        Если URL изменится — замени строку ниже.
        ============================================================ */
-    const WORKER_URL = 'https://muddy-fog-672c.timerbulatovdemid631.workers.dev/';
+    const WORKER_URL = 'https://muddy-fog-672c.timerbulatovdemid631.workers.dev';
 
     /* ---------- ТЕМА ---------- */
     const themeToggle = document.getElementById('themeToggle');
@@ -1428,6 +1482,10 @@
       return !isNaN(p) && p > 0 && p <= 65535;
     }
 
+    function isValidEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
     function validateProxyField(index, showError) {
       const ipEl = document.getElementById('proxy_' + index);
       const portEl = document.getElementById('proxy_port_' + index);
@@ -1452,6 +1510,7 @@
       const required = [
         document.getElementById('name').value.trim().length >= 2,
         document.getElementById('contact').value.trim().length >= 3,
+        isValidEmail(document.getElementById('email').value.trim()),
         !!document.getElementById('plan').value,
         !!document.getElementById('platform').value,
         document.getElementById('ipConfirm').checked,
@@ -1518,6 +1577,7 @@
 
       const name = document.getElementById('name').value.trim();
       const contact = document.getElementById('contact').value.trim();
+      const email = document.getElementById('email').value.trim();
       const plan = document.getElementById('plan').value;
       const platform = document.getElementById('platform').value;
       const ipConfirm = document.getElementById('ipConfirm').checked;
@@ -1529,6 +1589,10 @@
       if (contact.length < 3 || contact.length > 64) {
         showError('contactError', true); valid = false;
       } else showError('contactError', false);
+
+      if (!isValidEmail(email)) {
+        showError('emailError', true); valid = false;
+      } else showError('emailError', false);
 
       if (!plan) { showError('planError', true); valid = false; }
       else showError('planError', false);
@@ -1598,6 +1662,7 @@
       const data = {
         name: document.getElementById('name').value.trim(),
         contact: document.getElementById('contact').value.trim(),
+        email: document.getElementById('email').value.trim(),
         plan: document.getElementById('plan').value,
         platform: platform,
         botsCount: count,
@@ -1614,7 +1679,7 @@
       try {
         await sendToWorker(data);
         statusEl.className = 'form-status success';
-        statusEl.textContent = '✅ Заявка отправлена! Мы свяжемся с вами в Telegram в течение 10 минут.';
+        statusEl.textContent = '✅ Заявка отправлена! Проверьте почту — мы прислали подтверждение. Также свяжемся с вами в Telegram.';
         form.reset();
         renderProxyFields();
         updateProgress();
