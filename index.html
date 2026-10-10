@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MineBotX</title>
+  <title>MineBotX — AFK-боты для Minecraft-серверов 24/7 | Есть бесплатный тариф</title>
   <meta name="description" content="MineBotX — AFK-боты для поддержания Minecraft-серверов онлайн 24/7. Бесплатный тариф на 1 бота. Работаем с VPS, Minehut, Ploudos.">
   <meta name="keywords" content="minecraft бот, afk бот, minecraft сервер 24/7, minehut бот, ploudos бот, бесплатный бот minecraft">
   <meta name="theme-color" content="#0a0c0f">
@@ -404,84 +404,6 @@
       gap: 24px;
     }
 
-    .review-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 28px;
-      transition: all 0.25s;
-      display: flex;
-      flex-direction: column;
-    }
-    .review-card:hover { border-color: var(--border-hover); transform: translateY(-3px); }
-
-    .review-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
-
-    .review-platform {
-      font-size: 12px;
-      font-weight: 600;
-      padding: 4px 12px;
-      border-radius: 12px;
-      background: rgba(59, 130, 246, 0.12);
-      color: #60a5fa;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .review-uptime { font-size: 13px; font-weight: 700; color: var(--accent); }
-    .review-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
-
-    .review-card .review-server {
-      font-size: 13px;
-      color: var(--text-dim);
-      font-family: 'Courier New', monospace;
-      margin-bottom: 16px;
-      word-break: break-all;
-    }
-
-    .review-quote {
-      font-size: 14px;
-      color: var(--text-muted);
-      line-height: 1.65;
-      font-style: italic;
-      border-left: 2px solid var(--border-hover);
-      padding-left: 14px;
-      margin-bottom: 16px;
-      flex-grow: 1;
-    }
-
-    .review-footer {
-      font-size: 13px;
-      color: var(--text-faint);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-top: 1px solid var(--border);
-      padding-top: 14px;
-      margin-top: auto;
-    }
-
-    .review-author {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--text-muted);
-      font-weight: 500;
-    }
-
-    .review-avatar {
-      width: 26px;
-      height: 26px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--accent-blue), var(--accent));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 12px;
-      font-weight: 700;
-      color: #0a0c0f;
-    }
-
     .reviews-placeholder {
       text-align: center;
       padding: 60px 24px;
@@ -495,7 +417,6 @@
     .reviews-placeholder h3 { color: var(--text-dim); font-size: 18px; font-weight: 600; margin-bottom: 8px; }
     .reviews-placeholder p { max-width: 460px; margin: 0 auto; line-height: 1.6; }
 
-    /* PRICING */
     .products-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -588,7 +509,6 @@
     .product-price { font-size: 32px; font-weight: 800; color: var(--text); margin-bottom: 20px; }
     .product-price small { font-size: 14px; font-weight: 400; color: var(--text-dim); margin-left: 4px; }
 
-    /* FAQ */
     .faq-list {
       max-width: 720px;
       margin: 0 auto;
@@ -633,7 +553,6 @@
     .faq-item.open .faq-answer { max-height: 500px; padding: 0 24px 20px; }
     .faq-answer strong { color: var(--text); }
 
-    /* ORDER */
     .order-section { max-width: 1200px; margin: 0 auto; padding: 0 24px 100px; }
 
     .order-box {
@@ -643,17 +562,6 @@
       padding: 56px 48px;
       position: relative;
       overflow: hidden;
-    }
-
-    .order-box::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle at 30% 30%, rgba(59, 130, 246, 0.08), transparent 60%);
-      pointer-events: none;
     }
 
     .order-header { text-align: center; margin-bottom: 40px; position: relative; }
@@ -945,12 +853,10 @@
 </head>
 <body>
 
-  <!-- WARNING BAR -->
   <div class="warning-bar">
     ⚠️ <strong>Мы не поддерживаем Aternos.</strong> Их правила запрещают AFK-ботов, и мы уважаем это.
   </div>
 
-  <!-- HEADER -->
   <header class="header">
     <div class="header-inner">
       <a href="#" class="logo">
@@ -971,7 +877,6 @@
     </div>
   </header>
 
-  <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
       <div class="hero-badge">🎁 Есть бесплатный тариф на 1 бота</div>
@@ -987,7 +892,6 @@
     </div>
   </section>
 
-  <!-- HOW IT WORKS -->
   <section class="section reveal" id="how">
     <div class="section-title">
       <h2>Как это работает</h2>
@@ -1025,7 +929,6 @@
     </div>
   </section>
 
-  <!-- PLATFORMS -->
   <section class="section reveal" id="platforms">
     <div class="section-title">
       <h2>Проверенные платформы</h2>
@@ -1074,46 +977,12 @@
     </div>
   </section>
 
-  <!-- REVIEWS -->
   <section class="section reveal" id="reviews">
     <div class="section-title">
       <h2>Отзывы клиентов</h2>
       <p>Здесь публикуются только реальные отзывы — с разрешения авторов</p>
     </div>
-
-    <div class="reviews-container">
-      <!--
-        ============================================================
-        КАК ДОБАВИТЬ ОТЗЫВ:
-        ============================================================
-        1. Получите от клиента текст отзыва и разрешение на публикацию.
-        2. Скопируйте шаблон ниже и заполните данными.
-        3. Вставьте карточку внутрь .reviews-container.
-        4. Удалите .reviews-placeholder, когда появится хотя бы один отзыв.
-
-        ШАБЛОН:
-
-        <div class="review-card">
-          <div class="review-header">
-            <span class="review-platform">ORACLE VPS</span>
-            <span class="review-uptime">Uptime 99.9%</span>
-          </div>
-          <h3>Название сервера</h3>
-          <div class="review-server">play.example.com</div>
-          <div class="review-quote">«Реальный текст отзыва от клиента»</div>
-          <div class="review-footer">
-            <span class="review-author">
-              <span class="review-avatar">А</span>
-              Алексей, админ
-            </span>
-            <span>4 мес.</span>
-          </div>
-        </div>
-
-        ============================================================
-      -->
-    </div>
-
+    <div class="reviews-container"></div>
     <div class="reviews-placeholder" id="reviewsPlaceholder">
       <div class="icon">💬</div>
       <h3>Скоро здесь появятся отзывы</h3>
@@ -1121,7 +990,6 @@
     </div>
   </section>
 
-  <!-- PRICING -->
   <section class="section reveal" id="pricing">
     <div class="section-title">
       <h2>Выберите тариф</h2>
@@ -1129,7 +997,6 @@
     </div>
     <div class="products-grid products-grid-4">
 
-      <!-- FREE -->
       <div class="product-card free">
         <div class="product-icon">🎁</div>
         <h3>Free</h3>
@@ -1145,7 +1012,6 @@
         <a href="#order" class="btn btn-outline" style="width:100%;" data-plan="Free">Получить бесплатно</a>
       </div>
 
-      <!-- BASIC -->
       <div class="product-card">
         <div class="product-icon">🌾</div>
         <h3>Basic</h3>
@@ -1161,7 +1027,6 @@
         <a href="#order" class="btn btn-outline" style="width:100%;" data-plan="Basic">Заказать</a>
       </div>
 
-      <!-- PRO -->
       <div class="product-card popular">
         <div class="product-icon">⚔️</div>
         <h3>Pro</h3>
@@ -1177,7 +1042,6 @@
         <a href="#order" class="btn btn-primary" style="width:100%;" data-plan="Pro">Заказать</a>
       </div>
 
-      <!-- EMPIRE -->
       <div class="product-card">
         <div class="product-icon">👑</div>
         <h3>Empire</h3>
@@ -1199,7 +1063,6 @@
     </p>
   </section>
 
-  <!-- FAQ -->
   <section class="section reveal" id="faq">
     <div class="section-title">
       <h2>Частые вопросы</h2>
@@ -1294,7 +1157,6 @@
     </div>
   </section>
 
-  <!-- ORDER FORM -->
   <section class="order-section" id="order">
     <div class="order-box">
       <div class="order-header">
@@ -1303,7 +1165,6 @@
       </div>
 
       <form class="order-form" id="orderForm" novalidate autocomplete="off">
-        <!-- Honeypot -->
         <input type="text" name="website" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
 
         <div class="form-row">
@@ -1406,7 +1267,6 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-inner">
       <p>© 2025 MineBotX. Все права защищены. <a href="#">Политика конфиденциальности</a></p>
@@ -1420,28 +1280,12 @@
 
   <script>
     /* ============================================================
-       ⚙️ НАСТРОЙКА ОТПРАВКИ ЗАЯВОК
-       ============================================================
-       Вариант 1 — напрямую в Telegram (по умолчанию).
-       Вариант 2 — на Python-сервер (если используешь bot.py).
-
-       Для Варианта 1: заполни TELEGRAM_BOT_TOKEN и TELEGRAM_CHAT_ID.
-       Для Варианта 2: раскомментируй USE_PYTHON_SERVER = true
-                        и укажи PYTHON_SERVER_URL.
+       URL воркера Cloudflare — зашит прямо сюда, без переменной.
+       Если URL изменится — замени строку ниже.
        ============================================================ */
+    const WORKER_URL = 'https://muddy-fog-672c.timerbulatovdemid631.workers.dev/';
 
-    const USE_PYTHON_SERVER = true;
-
-    // --- Для прямого Telegram ---
-    const TELEGRAM_BOT_TOKEN = '8859998664:AAGgUIQTwtfeJ5XP5MtjhFjIYV-_1Lu-lIU';
-    const TELEGRAM_CHAT_ID   = '8158766041';
-
-    // --- Для Python-сервера ---
-    const PYTHON_SERVER_URL = 'https://muddy-fog-672c.timerbulatovdemid631.workers.dev';
-
-    /* ============================================================
-       ТЕМА
-       ============================================================ */
+    /* ---------- ТЕМА ---------- */
     const themeToggle = document.getElementById('themeToggle');
     const savedTheme = localStorage.getItem('theme') || 'dark';
     document.documentElement.setAttribute('data-theme', savedTheme);
@@ -1455,7 +1299,7 @@
       themeToggle.textContent = next === 'light' ? '☀️' : '🌙';
     });
 
-    /* FAQ */
+    /* ---------- FAQ ---------- */
     document.querySelectorAll('.faq-question').forEach(q => {
       q.addEventListener('click', () => {
         const item = q.parentElement;
@@ -1465,7 +1309,7 @@
       });
     });
 
-    /* Smooth scroll */
+    /* ---------- Smooth scroll ---------- */
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', e => {
         const href = a.getAttribute('href');
@@ -1476,7 +1320,7 @@
       });
     });
 
-    /* Предзаполнение тарифа */
+    /* ---------- Предзаполнение тарифа ---------- */
     document.querySelectorAll('[data-plan]').forEach(btn => {
       btn.addEventListener('click', () => {
         const plan = btn.getAttribute('data-plan');
@@ -1485,7 +1329,7 @@
       });
     });
 
-    /* Reveal on scroll */
+    /* ---------- Reveal on scroll ---------- */
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -1496,7 +1340,7 @@
     }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-    /* Back to top */
+    /* ---------- Back to top ---------- */
     const backToTop = document.getElementById('backToTop');
     let scrollTicking = false;
     window.addEventListener('scroll', () => {
@@ -1512,7 +1356,7 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    /* Динамические поля IP/прокси */
+    /* ---------- Динамические поля IP/прокси ---------- */
     const botsCountSelect = document.getElementById('botsCount');
     const proxyList = document.getElementById('proxyList');
     const proxyBadge = document.getElementById('proxyBadge');
@@ -1520,24 +1364,23 @@
     function renderProxyFields() {
       const count = parseInt(botsCountSelect.value, 10) || 1;
       proxyList.innerHTML = '';
-      proxyBadge.textContent = `${count} из ${count}`;
+      proxyBadge.textContent = count + ' из ' + count;
 
       for (let i = 1; i <= count; i++) {
         const item = document.createElement('div');
         item.className = 'proxy-item';
-        item.innerHTML = `
-          <div class="proxy-item-label">Бот #${i}</div>
-          <div class="form-row">
-            <input type="text" name="proxy_${i}" id="proxy_${i}"
-                   placeholder="IP или user:pass@IP"
-                   data-proxy-index="${i}"
-                   inputmode="url" autocomplete="off" spellcheck="false">
-            <input type="text" name="proxy_port_${i}" id="proxy_port_${i}"
-                   placeholder="Порт"
-                   data-proxy-port="${i}"
-                   inputmode="numeric" autocomplete="off" maxlength="5">
-          </div>
-        `;
+        item.innerHTML =
+          '<div class="proxy-item-label">Бот #' + i + '</div>' +
+          '<div class="form-row">' +
+            '<input type="text" name="proxy_' + i + '" id="proxy_' + i + '" ' +
+                   'placeholder="IP или user:pass@IP" ' +
+                   'data-proxy-index="' + i + '" ' +
+                   'inputmode="url" autocomplete="off" spellcheck="false">' +
+            '<input type="text" name="proxy_port_' + i + '" id="proxy_port_' + i + '" ' +
+                   'placeholder="Порт" ' +
+                   'data-proxy-port="' + i + '" ' +
+                   'inputmode="numeric" autocomplete="off" maxlength="5">' +
+          '</div>';
         proxyList.appendChild(item);
       }
     }
@@ -1548,7 +1391,7 @@
     });
     renderProxyFields();
 
-    /* Проверка Aternos */
+    /* ---------- Проверка Aternos ---------- */
     const platformSelect = document.getElementById('platform');
     const statusEl = document.getElementById('formStatus');
 
@@ -1563,7 +1406,7 @@
       updateProgress();
     });
 
-    /* Валидация IP/прокси */
+    /* ---------- Валидация IP/прокси ---------- */
     function isValidProxyHost(host) {
       if (!host) return false;
       const cleanHost = host.includes('@') ? host.split('@').pop() : host;
@@ -1581,8 +1424,8 @@
     }
 
     function validateProxyField(index, showError) {
-      const ipEl = document.getElementById(`proxy_${index}`);
-      const portEl = document.getElementById(`proxy_port_${index}`);
+      const ipEl = document.getElementById('proxy_' + index);
+      const portEl = document.getElementById('proxy_port_' + index);
       if (!ipEl || !portEl) return false;
 
       const ipValid = isValidProxyHost(ipEl.value.trim());
@@ -1599,7 +1442,7 @@
       return valid;
     }
 
-    /* Прогресс заполнения */
+    /* ---------- Прогресс заполнения ---------- */
     function updateProgress() {
       const required = [
         document.getElementById('name').value.trim().length >= 2,
@@ -1611,8 +1454,8 @@
 
       const count = parseInt(botsCountSelect.value, 10) || 1;
       for (let i = 1; i <= count; i++) {
-        const ip = document.getElementById(`proxy_${i}`)?.value.trim();
-        const port = document.getElementById(`proxy_port_${i}`)?.value.trim();
+        const ip = document.getElementById('proxy_' + i) ? document.getElementById('proxy_' + i).value.trim() : '';
+        const port = document.getElementById('proxy_port_' + i) ? document.getElementById('proxy_port_' + i).value.trim() : '';
         required.push(!!ip && !!port);
       }
 
@@ -1628,24 +1471,26 @@
       }
     }
 
-    /* Debounce */
-    function debounce(fn, delay = 300) {
+    /* ---------- Debounce ---------- */
+    function debounce(fn, delay) {
+      delay = delay || 300;
       let timer;
-      return (...args) => {
+      return function() {
+        const args = arguments;
         clearTimeout(timer);
-        timer = setTimeout(() => fn(...args), delay);
+        timer = setTimeout(() => fn.apply(null, args), delay);
       };
     }
 
-    document.addEventListener('input', debounce((e) => {
+    document.addEventListener('input', debounce(function(e) {
       if (e.target.matches('input, select, textarea')) updateProgress();
     }, 200));
 
-    document.addEventListener('change', (e) => {
+    document.addEventListener('change', function(e) {
       if (e.target.matches('input[type="checkbox"]')) updateProgress();
     });
 
-    document.addEventListener('blur', (e) => {
+    document.addEventListener('blur', function(e) {
       if (e.target.matches('[data-proxy-index]')) {
         const i = e.target.getAttribute('data-proxy-index');
         validateProxyField(i, false);
@@ -1656,7 +1501,7 @@
       }
     }, true);
 
-    /* Валидация формы */
+    /* ---------- Валидация формы ---------- */
     function showError(id, show) {
       const el = document.getElementById(id);
       if (!el) return;
@@ -1700,31 +1545,9 @@
       return valid;
     }
 
-    /* Отправка в Telegram напрямую */
-    async function sendToTelegramDirect(text) {
-      if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_CHAT_ID ||
-          TELEGRAM_BOT_TOKEN === 'ВСТАВЬТЕ_ТОКЕН_БОТА') {
-        throw new Error('Telegram не настроен');
-      }
-      const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
-      const response = await fetch(url, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          chat_id: TELEGRAM_CHAT_ID,
-          text: text,
-          parse_mode: 'Markdown',
-          disable_web_page_preview: true
-        })
-      });
-      const result = await response.json();
-      if (!result.ok) throw new Error(result.description || 'Telegram API error');
-      return true;
-    }
-
-    /* Отправка на Python-сервер */
-    async function sendToPythonServer(data) {
-      const response = await fetch(PYTHON_SERVER_URL, {
+    /* ---------- Отправка на воркер ---------- */
+    async function sendToWorker(data) {
+      const response = await fetch(WORKER_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
@@ -1734,11 +1557,11 @@
       return true;
     }
 
-    /* Обработка отправки формы */
+    /* ---------- Обработка отправки формы ---------- */
     const form = document.getElementById('orderForm');
     const submitBtn = document.getElementById('submitBtn');
 
-    form.addEventListener('submit', async (e) => {
+    form.addEventListener('submit', async function(e) {
       e.preventDefault();
 
       const honeypot = form.querySelector('input[name="website"]');
@@ -1760,9 +1583,9 @@
       const count = parseInt(botsCountSelect.value, 10) || 1;
       const proxies = [];
       for (let i = 1; i <= count; i++) {
-        const ip = document.getElementById(`proxy_${i}`).value.trim();
-        const port = document.getElementById(`proxy_port_${i}`).value.trim();
-        proxies.push(`Бот #${i}: ${ip}:${port}`);
+        const ip = document.getElementById('proxy_' + i).value.trim();
+        const port = document.getElementById('proxy_port_' + i).value.trim();
+        proxies.push('Бот #' + i + ': ' + ip + ':' + port);
       }
 
       const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || 'неизвестно';
@@ -1778,29 +1601,13 @@
         timezone: tz,
       };
 
-      const telegramText =
-        '🆕 *Новая заявка в MineBotX*\n\n' +
-        `👤 *Имя:* ${escapeMarkdown(data.name)}\n` +
-        `💬 *Telegram:* ${escapeMarkdown(data.contact)}\n` +
-        `📦 *Тариф:* ${escapeMarkdown(data.plan)}\n` +
-        `🖥 *Платформа:* ${escapeMarkdown(data.platform)}\n` +
-        `🤖 *Ботов:* ${data.botsCount}\n\n` +
-        `📡 *IP / прокси:*\n${data.proxies.map(p => '  • ' + escapeMarkdown(p)).join('\n')}\n\n` +
-        `📝 *Комментарий:* ${escapeMarkdown(data.message)}\n\n` +
-        `🌍 *Часовой пояс:* ${escapeMarkdown(data.timezone)}\n` +
-        `🕐 ${new Date().toLocaleString('ru-RU')}`;
-
       submitBtn.disabled = true;
       submitBtn.textContent = 'Отправка...';
       statusEl.className = 'form-status';
       statusEl.textContent = '';
 
       try {
-        if (USE_PYTHON_SERVER) {
-          await sendToPythonServer(data);
-        } else {
-          await sendToTelegramDirect(telegramText);
-        }
+        await sendToWorker(data);
         statusEl.className = 'form-status success';
         statusEl.textContent = '✅ Заявка отправлена! Мы свяжемся с вами в Telegram в течение 10 минут.';
         form.reset();
@@ -1815,10 +1622,6 @@
         submitBtn.textContent = 'Отправить заявку';
       }
     });
-
-    function escapeMarkdown(text) {
-      return String(text).replace(/[_*[\]()~`>#+\-=|{}.!]/g, '\\$&');
-    }
 
     updateProgress();
   </script>
